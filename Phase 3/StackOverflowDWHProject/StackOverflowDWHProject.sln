@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "StackOverflowDWHProject", "StackOverflowDWHProject.dwproj", "{4E31610B-278A-42C1-9DF4-C80EF932CF15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E31610B-278A-42C1-9DF4-C80EF932CF15}.Development|Default.ActiveCfg = Development
+		{4E31610B-278A-42C1-9DF4-C80EF932CF15}.Development|Default.Build.0 = Development
+		{4E31610B-278A-42C1-9DF4-C80EF932CF15}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D9EB41A-9C10-44FC-8094-BBBE3B29E09D}
+	EndGlobalSection
+EndGlobal

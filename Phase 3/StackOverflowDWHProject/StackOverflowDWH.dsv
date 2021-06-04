@@ -1,0 +1,165 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d429f615-e996-46ef-9304-e463ba5392d8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>StackOverflowDWH</ID>
+  <Name>StackOverflowDWH</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>StackOverflowDWH</DataSourceID>
+  <Schema>
+    <xs:schema id="StackOverflowDWH" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="StackOverflowDWH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="94de7d02-86a7-4e9c-99ed-4b2eb9c338fc">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Date_Dimension" msprop:design-time-name="d894a286-e124-4fda-ba8d-214c3941f70e" msprop:DbTableName="Date_Dimension" msprop:FriendlyName="Date_Dimension" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LastAccessDate" msprop:design-time-name="521cad9a-e805-4b33-9c86-73de34be3aec" msprop:DbColumnName="LastAccessDate" msprop:FriendlyName="LastAccessDate">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Day" msprop:design-time-name="9ff44e14-67ec-4acb-9ced-207bb313edcf" msprop:DbColumnName="Day" msprop:FriendlyName="Day" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:design-time-name="65b8e4a9-f3b9-4f70-95ba-c9ab06ad4a69" msprop:DbColumnName="Month" msprop:FriendlyName="Month" type="xs:int" minOccurs="0" />
+                  <xs:element name="Year" msprop:design-time-name="9c9b6f14-83c1-4802-acf9-8c2b7000804b" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Subject_Dimension" msprop:design-time-name="0c635dd0-bb98-4fb5-b8ef-17fb330e2f54" msprop:DbTableName="Subject_Dimension" msprop:FriendlyName="Subject_Dimension" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Subject" msprop:design-time-name="28b075aa-653c-4b34-b114-7e38938888c6" msprop:DbColumnName="Subject" msprop:FriendlyName="Subject">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SubjectID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="c3734d5e-90bc-462b-b01a-fc09f7613cff" msprop:DbColumnName="SubjectID" msprop:FriendlyName="SubjectID" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_UserLocation_Dimension" msprop:design-time-name="cb8d6cc4-8ad9-47df-90bc-e2aa5f9c3c3b" msprop:DbTableName="UserLocation_Dimension" msprop:FriendlyName="UserLocation_Dimension" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LocationID" msprop:design-time-name="05fcac7c-49bf-4abc-9ab0-c7271e35b46e" msprop:DbColumnName="LocationID" msprop:FriendlyName="LocationID" type="xs:int" />
+                  <xs:element name="Location" msprop:design-time-name="d200e486-6b70-436b-9546-c0a7b5f5b456" msprop:DbColumnName="Location" msprop:FriendlyName="Location" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Users_operations_Fact" msprop:design-time-name="dea19899-c136-4af0-8169-c3cc3b45eb32" msprop:DbTableName="Users_operations_Fact" msprop:FriendlyName="Users_operations_Fact" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="UserID" msprop:design-time-name="879d2f39-ed7d-4922-98e8-213583049a0b" msprop:DbColumnName="UserID" msprop:FriendlyName="UserID" type="xs:int" minOccurs="0" />
+                  <xs:element name="LastAccessDate" msprop:design-time-name="e3671628-c716-4501-9700-20591b27a728" msprop:DbColumnName="LastAccessDate" msprop:FriendlyName="LastAccessDate" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LocationID" msprop:design-time-name="0ae1c4d4-7fe3-4cd4-8ef5-d7f13a123453" msprop:DbColumnName="LocationID" msprop:FriendlyName="LocationID" type="xs:int" />
+                  <xs:element name="Subject" msprop:design-time-name="53ed2c62-d347-4182-8d77-8e3010dec023" msprop:DbColumnName="Subject" msprop:FriendlyName="Subject" type="xs:int" />
+                  <xs:element name="PostsCount" msprop:design-time-name="885f511b-d0eb-4b9e-bb71-dc1cfa72decf" msprop:DbColumnName="PostsCount" msprop:FriendlyName="PostsCount" type="xs:int" minOccurs="0" />
+                  <xs:element name="CommentsCount" msprop:design-time-name="55afc73c-fdfa-4e90-ab68-2f3172f5b365" msprop:DbColumnName="CommentsCount" msprop:FriendlyName="CommentsCount" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Users_Dimension" msprop:design-time-name="7848ca8e-e38f-41be-bad0-d3a1afadd13e" msprop:DbTableName="Users_Dimension" msprop:FriendlyName="Users_Dimension" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="UserID" msprop:design-time-name="f5b821bc-da87-49db-b09e-87cc4bc95b51" msprop:DbColumnName="UserID" msprop:FriendlyName="UserID" type="xs:int" />
+                  <xs:element name="DisplayName" msprop:design-time-name="b8d725ce-ed51-4d0b-b748-9ff47ff224fb" msprop:DbColumnName="DisplayName" msprop:FriendlyName="DisplayName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="UpVotes" msprop:design-time-name="59794204-75cf-4a1a-b922-dbf81703eab3" msprop:DbColumnName="UpVotes" msprop:FriendlyName="UpVotes" type="xs:int" minOccurs="0" />
+                  <xs:element name="DownVotes" msprop:design-time-name="2fb7df47-1a7d-4394-aab3-b478071a5b8a" msprop:DbColumnName="DownVotes" msprop:FriendlyName="DownVotes" type="xs:int" minOccurs="0" />
+                  <xs:element name="Age" msprop:design-time-name="31686218-f604-4928-a055-6a0cafc700ec" msprop:DbColumnName="Age" msprop:FriendlyName="Age" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Date_Dimension" />
+          <xs:field xpath="LastAccessDate" />
+        </xs:unique>
+        <xs:unique name="dbo_Subject_Dimension_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Subject_Dimension" />
+          <xs:field xpath="SubjectID" />
+        </xs:unique>
+        <xs:unique name="dbo_UserLocation_Dimension_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_UserLocation_Dimension" />
+          <xs:field xpath="LocationID" />
+        </xs:unique>
+        <xs:unique name="dbo_Users_Dimension_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Users_Dimension" />
+          <xs:field xpath="UserID" />
+        </xs:unique>
+        <xs:keyref name="FK_Users_operations_Fact_UserLocation_Dimension" refer="dbo_UserLocation_Dimension_Constraint1">
+          <xs:selector xpath=".//dbo_Users_operations_Fact" />
+          <xs:field xpath="LocationID" />
+        </xs:keyref>
+        <xs:keyref name="FK_Users_operations_Fact_Subject_Dimension" refer="dbo_Subject_Dimension_Constraint1">
+          <xs:selector xpath=".//dbo_Users_operations_Fact" />
+          <xs:field xpath="Subject" />
+        </xs:keyref>
+        <xs:keyref name="FK_Users_operations_Fact_Date_Dimension" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Users_operations_Fact" />
+          <xs:field xpath="LastAccessDate" />
+        </xs:keyref>
+        <xs:keyref name="FK_Users_operations_Fact_Users_Dimension" refer="dbo_Users_Dimension_Constraint1">
+          <xs:selector xpath=".//dbo_Users_operations_Fact" />
+          <xs:field xpath="UserID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <StackOverflowDWH xmlns="" />
+  </Schema>
+</DataSourceView>

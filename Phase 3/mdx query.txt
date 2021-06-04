@@ -1,0 +1,39 @@
+-----------------------------union---------------------------------------------------------------
+select 
+{[Measures].[Posts Count] , [Measures].[Comments Count]}on columns,
+
+union(
+[Date Dimension].[Hierarchy].[Year].&[2012].children ,[Date Dimension].[Hierarchy].[Year].&[2013].children) on rows
+
+from [StackOverflowDWH]
+
+-----------------------------member---------------------------------------------------------------
+select 
+{[Measures].[Posts Count] , [Measures].[Comments Count]} on columns,
+
+{[Subject Dimension].[Hierarchy].[Subject].members}on rows
+
+from [StackOverflowDWH]
+
+where ([Date Dimension].[Year].&[2013])
+
+-------------------------------except query------------------------------------------------
+select 
+{[Measures].[Posts Count],[Measures].[Comments Count]}on columns , 
+
+except([Date Dimension].[Year].[All].children, [Date Dimension].[Year].[All].UNKNOWNMEMBER )on rows 
+from [StackOverflowDWH]
+where ([Users Dimension].[Hierarchy].[Age].&[23]:[Users Dimension].[Hierarchy].[Age].&[57])
+
+
+
+
+
+-----------------------------cross join ---------------------------------------------------------------
+
+select 
+{[Measures].[Posts Count],[Measures].[Comments Count]}on columns , 
+
+{crossjoin([Date Dimension].[Hierarchy].[Year].members ,[Date Dimension].[Month].children )} on rows 
+from [StackOverflowDWH]
+
